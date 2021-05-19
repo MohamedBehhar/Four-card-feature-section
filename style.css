@@ -1,0 +1,185 @@
+/* General rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/* variables */
+:root{
+
+/* Primary Color */
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+/* Neutral */
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body{
+    background: var(--Very-Light-Gray);
+}
+
+.container{
+    margin: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* making the container resonsive  */
+@media screen and (max-width: 1440px){
+    .container{
+        max-width: 1080px;
+    }
+}
+
+/* styling the text area */
+.text{
+    max-width: 50%;
+    min-height: 20vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.text h2{
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+    margin: 0;
+}
+.text h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    margin: 0;
+}
+.text p{
+    color: var(--Grayish-Blue);
+}
+
+/* styling the boxes */
+.boxes{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+
+/* making each columns width equal */
+.column{
+    flex: 1;
+    width: 100%;
+}
+
+/* styling the second column */
+.clmn2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* styling each box */
+.box{
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    min-height: 200px;
+    min-width: 100%;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* coloring the top border of each box  */
+.supervisor{
+    border-top: 5px solid var(--Cyan);
+}
+.team-builder{
+    border-top: 5px solid var(--Red);
+}
+.karma{
+    border-top: 5px solid var(--Orange);
+}
+.calculator{
+    border-top: 5px solid var(--Blue);
+}
+
+/* positioning each box image */
+.boxes .column .image{
+    width: 80px;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    .attribution a { 
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 945px){
+    .text{
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 800px)
+{
+    .boxes{
+        flex-direction: column;
+    }
+    
+    .column{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .text{
+        max-width: 100%;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .text h1,
+    .text h2{
+        font-size: 1.5rem;
+    }
+
+    .column{
+        width: 75%;
+    }
+}  
+@media screen and (max-width: 475px){
+    .column{
+        width: 100%;
+    }
+
+    .text{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}  
+
+
