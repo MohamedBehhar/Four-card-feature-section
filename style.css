@@ -47,8 +47,8 @@ body{
 .text{
     max-width: 50%;
     min-height: 20vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,10 +176,7 @@ body{
         width: 100%;
     }
 
-    .text{
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
+    
 }  
 
 
